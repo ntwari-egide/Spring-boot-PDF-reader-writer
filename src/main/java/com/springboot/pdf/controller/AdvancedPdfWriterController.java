@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 @RestController
 public class AdvancedPdfWriterController {
     @GetMapping("/advancedpdf1")
-    public Document creatingAdvancedPdf()throws Exception{
+    public String creatingAdvancedPdf()throws Exception{
         Document document = new Document();
         PdfWriter.getInstance(document,new FileOutputStream("advancedPdf1.pdf"));
 
@@ -25,6 +25,6 @@ public class AdvancedPdfWriterController {
 
         document.add(header);
         document.close();
-        return document;
+        return "Document created";
     }
 }
