@@ -66,6 +66,7 @@ public class PdfManagerController {
         PdfPTable table = new PdfPTable(3);
 
 
+        document.add(table);
         document.close();
         return "pdf created ";
     }
