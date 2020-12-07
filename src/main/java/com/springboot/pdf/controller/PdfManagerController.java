@@ -68,15 +68,8 @@ public class PdfManagerController {
 
         Table table = new Table(pointColumnWidths);
 
-        // Adding cells to the table
-        table.addCell(new Cell().add("Name"));
-        table.addCell(new Cell().add("Raju"));
-        table.addCell(new Cell().add("Id"));
-        table.addCell(new Cell().add("1001"));
-        table.addCell(new Cell().add("Designation"));
-        table.addCell(new Cell().add("Programmer"));
 
-
+        document.add((Element) table);
         document.close();
         return "pdf created ";
     }
