@@ -39,10 +39,9 @@ public class PdfManagerController {
         PdfWriter.getInstance(document,new FileOutputStream("ImagePdf.pdf"));
 
         document.open();
-        Path path = Paths.get(ClassLoader.getSystemResource("shapes.png").toURI());
+        String imageFile = "C:\\Users\\user\\Documents\\ntwari egide documents\\spring boot\\Spring-boot-PDF-reader-writer\\src\\main\\java\\com\\springboot\\pdf\\controller\\shapes.png";
 
-        Image imageToInsert =  Image.getInstance(path.toAbsolutePath().toString());
-
+        Image imageToInsert = Image.getInstance(imageFile);
         document.add(imageToInsert);
 
         document.close();
