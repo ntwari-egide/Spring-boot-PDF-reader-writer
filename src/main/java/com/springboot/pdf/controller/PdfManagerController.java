@@ -41,7 +41,12 @@ public class PdfManagerController {
         document.open();
         String imageFile = "C:\\Users\\user\\Documents\\ntwari egide documents\\spring boot\\Spring-boot-PDF-reader-writer\\src\\main\\java\\com\\springboot\\pdf\\controller\\shapes.png";
 
+        Font font = FontFactory.getFont(FontFactory.HELVETICA,17,BaseColor.BLACK);
+        Chunk header = new Chunk("Image inserted by spring booot",font);
+
         Image imageToInsert = Image.getInstance(imageFile);
+
+        document.add(font);
         document.add(imageToInsert);
 
         document.close();
