@@ -38,7 +38,7 @@ public class AdvancedPdfWriterController {
         paragraph1.setPaddingTop(40);
         paragraph1.setIndentationLeft(30);
 
-        document.add(header);A
+        document.add(header);
         document.add(paragraph1);
         document.close();
 
