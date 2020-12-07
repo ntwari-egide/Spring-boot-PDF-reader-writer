@@ -30,4 +30,12 @@ public class PdfManagerController {
 
         return "Pdf generated ";
     }
+
+    @GetMapping("/make-image-pdf/itext")
+    public String creatingImagePdfUsingIText()throws Exception{
+        Document document = new Document();
+        PdfWriter.getInstance(document,new FileOutputStream("ImagePdf.pdf"));
+
+        return "spring pdf generated ";
+    }
 }
