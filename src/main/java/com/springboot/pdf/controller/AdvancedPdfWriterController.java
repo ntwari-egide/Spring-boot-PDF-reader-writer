@@ -28,6 +28,7 @@ public class AdvancedPdfWriterController {
 
         document.add(header);
         document.close();
+
         return "Document created";
     }
 }
