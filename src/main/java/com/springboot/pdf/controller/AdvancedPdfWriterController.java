@@ -24,12 +24,12 @@ public class AdvancedPdfWriterController {
         //setting the author name
         document.addAuthor("ntwari egide - yombi");
         document.addCreationDate();
-        document.addTitle("ADVANCED JAVA SPRING BOOT PDF WRITER");
+        document.addTitle("Advanced java pdf writer");
 
         document.open();
         Font font = FontFactory.getFont(FontFactory.HELVETICA,18, BaseColor.BLACK);
         document.setMargins(23f,23f,23f,23f);
-        Chunk header = new Chunk("Advanced PDF creator",font);
+        Chunk header = new Chunk("ADVANCED SPRING PDF WRITER",font);
         document.add(Chunk.NEWLINE);
         header.setBackground(BaseColor.YELLOW);
 
@@ -107,7 +107,7 @@ public class AdvancedPdfWriterController {
 
         //                                  ADDING THE LISTS
         Paragraph paragraph2 = new Paragraph("\nSuccessful law firms require effective finance, accounting and billing, but these critical functions involve a great deal of labor-intensive routine" +
-                "\n\n\nOur services we provide : ");
+                "\n\n\nOur services we provide : \n\n");
 
         com.itextpdf.text.List listsOfServices = new com.itextpdf.text.List();
         listsOfServices.add("Arbitration");
