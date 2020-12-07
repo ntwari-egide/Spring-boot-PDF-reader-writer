@@ -64,12 +64,19 @@ public class PdfManagerController {
         Document document = new Document();
         PdfWriter.getInstance(document,new FileOutputStream("tableInsertedPdf.pdf"));
         document.open();
-        float [] pointColumnWidths = {150F, 150F, 150F};
+        PdfPTable table = new PdfPTable(3);
+        table.addCell("#");
+        table.addCell("students");
+        table.addCell("ages");
 
-        Table table = new Table(pointColumnWidths);
+        for (int i = 1; i <= 30; i++) {
+            table.addCell(String.valueOf(i));
+            table.addCell("student " + i);
+            table.addCell("student description " + i);
+        }
 
 
-        document.add((Element) table);
+        document.add(table);
         document.close();
         return "pdf created ";
     }
