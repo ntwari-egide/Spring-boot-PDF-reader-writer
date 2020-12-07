@@ -11,7 +11,7 @@ import java.io.FileOutputStream;
 public class PdfManagerController {
 
     @GetMapping("/make-pdf/itext")
-    public void creatingPdfUsingIText()throws Exception{
+    public String creatingPdfUsingIText()throws Exception{
         Document document = new Document();
 
         // creating the instance of the PdfWriter class
@@ -27,5 +27,7 @@ public class PdfManagerController {
         document.add(content);
         //Closing the document
         document.close();
+
+        return "Pdf generated ";
     }
 }
