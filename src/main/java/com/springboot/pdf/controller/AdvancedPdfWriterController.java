@@ -103,6 +103,10 @@ public class AdvancedPdfWriterController {
             table.addCell(String.valueOf(sum));
         }
 
+
+        // styling the table
+        table.setHorizontalAlignment(0);
+
         document.add(header);
         document.add(paragraph1);
         document.add(imageToInsert);
