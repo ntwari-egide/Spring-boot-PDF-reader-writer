@@ -108,13 +108,20 @@ public class AdvancedPdfWriterController {
         //                                  ADDING THE LISTS
         Paragraph paragraph2 = new Paragraph("Successful law firms require effective finance, accounting and billing, but these critical functions involve a great deal of labor-intensive routine");
 
-        //
+        com.itextpdf.text.List listsOfServices = new com.itextpdf.text.List(com.itextpdf.text.List.ALIGN_CENTER);
+        listsOfServices.add("Arbitration");
+        listsOfServices.add("Mediation");
+        listsOfServices.add("Documenting");
+        listsOfServices.add("Business Crimes, Fraud and Compliance");
+        listsOfServices.add("Capital Markets and Regulations");
+
         document.add(header);
         document.add(paragraph1);
         document.add(imageToInsert);
         document.add(header2);
         document.add(table);
         document.add(paragraph2);
+        document.add(listsOfServices);
         document.close();
 
         return "Document created";
