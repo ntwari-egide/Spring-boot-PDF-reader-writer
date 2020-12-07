@@ -4,6 +4,7 @@ import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.property.BackgroundImage;
 import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfPage;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -58,7 +59,7 @@ public class AdvancedPdfWriterController {
         Chunk header2 = new Chunk("Table of all required calculation",new Font(FontFactory.getFont(FontFactory.HELVETICA,16,new BaseColor(252, 140, 3))));
 
         //                                       ADDING THE TABLE
-        Table table = new Table(4);
+        PdfPTable table = new PdfPTable(4);
         table.addCell("industry");
         table.addCell("segment");
         table.addCell("sales");
@@ -106,7 +107,7 @@ public class AdvancedPdfWriterController {
         document.add(paragraph1);
         document.add(imageToInsert);
         document.add(header2);
-        document.add((Element) table);
+        document.add(table);
         document.close();
 
         return "Document created";
