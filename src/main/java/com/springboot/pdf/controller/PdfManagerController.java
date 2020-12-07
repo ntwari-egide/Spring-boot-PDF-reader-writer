@@ -46,7 +46,7 @@ public class PdfManagerController {
 
         Image imageToInsert = Image.getInstance(imageFile);
 
-        document.add(font);
+        document.add(header);
         document.add(imageToInsert);
 
         document.close();
