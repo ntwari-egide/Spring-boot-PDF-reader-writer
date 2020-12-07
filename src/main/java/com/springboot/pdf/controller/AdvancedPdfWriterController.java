@@ -40,10 +40,18 @@ public class AdvancedPdfWriterController {
         // 2 -> Text right
 
         paragraph1.setAlignment(0);
-//        paragraph1.setIndentationLeft(30);
+        //paragraph1.setIndentationLeft(30);
+
+        //                                                      ADDING THE IMAGE INTO THE CONTENT
+
+        String imageFile = "C:\\Users\\user\\Documents\\ntwari egide documents\\spring boot\\Spring-boot-PDF-reader-writer\\src\\main\\resources\\apple.jpg";
+
+        Image imageToInsert  = Image.getInstance(imageFile);
+
 
         document.add(header);
         document.add(paragraph1);
+        document.add(imageToInsert);
         document.close();
 
         return "Document created";
