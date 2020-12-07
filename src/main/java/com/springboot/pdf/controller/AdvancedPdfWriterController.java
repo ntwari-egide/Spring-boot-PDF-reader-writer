@@ -1,6 +1,6 @@
 package com.springboot.pdf.controller;
 
-import com.itextpdf.text.Document;
+import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,8 +19,12 @@ public class AdvancedPdfWriterController {
         document.addCreationDate();
         document.addTitle("Advanced java pdf writer");
 
+        document.open();
+        Font font = FontFactory.getFont(FontFactory.HELVETICA,18, BaseColor.BLACK);
+        Chunk header = new Chunk("Advanced PDF creator",font);
 
-
+        document.add(header);
+        document.close();
         return document;
     }
 }
