@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 @RestController
 public class PdfManagerController {
 
-    @GetMapping("/make-pdf/itext")
+    @GetMapping("/make-text-pdf/itext")
     public String creatingPdfUsingIText()throws Exception{
         Document document = new Document();
 
