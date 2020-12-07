@@ -36,6 +36,10 @@ public class PdfManagerController {
         Document document = new Document();
         PdfWriter.getInstance(document,new FileOutputStream("ImagePdf.pdf"));
 
+        document.open();
+
+        document.close();
+
         return "spring pdf generated ";
     }
 }
