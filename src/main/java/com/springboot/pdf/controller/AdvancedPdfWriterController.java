@@ -50,9 +50,13 @@ public class AdvancedPdfWriterController {
         imageToInsert.setAlt("apple logo image");
         imageToInsert.scaleToFit(400,400);
 
+        //                                                      ADDING THE HEADER PARAGRAPH
+        Chunk header2 = new Chunk("Table of all required calculation",new Font(FontFactory.getFont(FontFactory.HELVETICA_BOLDOBLIQUE,16,new BaseColor(252, 140, 3))));
+
         document.add(header);
         document.add(paragraph1);
         document.add(imageToInsert);
+        document.add(header2);
         document.close();
 
         return "Document created";
