@@ -75,7 +75,6 @@ public class AdvancedPdfWriterController {
         industries.add("Mukamira daily industry");
         industries.add("Icyayi industry rw");
 
-
         List<String> segments  = new ArrayList();
         segments.add("Industry");
         segments.add("Enterprise");
@@ -87,17 +86,21 @@ public class AdvancedPdfWriterController {
 
 
         List<Integer> sales  = new ArrayList();
-        industries.add(123000);
-        industries.add("Enterprise");
-        industries.add("Industry");
-        industries.add("Enterprise");
-        industries.add("Industry");
-        industries.add("Enterprise");
-        industries.add("Industry");
+        sales.add(123000);
+        sales.add(133000);
+        sales.add(323000);
+        sales.add(12000);
+        sales.add(1123000);
+        sales.add(230000);
+        sales.add(2123000);
 
-
-        for (int i = 0 ; )
-
+        for(int i=0;i< 7;i ++){
+            table.addCell(industries.get(i));
+            table.addCell(segments.get(i));
+            table.addCell(String.valueOf(sales.get(i)));
+            int sum = sales.get(i) * 3;
+            table.addCell(String.valueOf(sum));
+        }
 
         document.add(header);
         document.add(paragraph1);
