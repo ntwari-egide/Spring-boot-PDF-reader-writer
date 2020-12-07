@@ -106,6 +106,7 @@ public class AdvancedPdfWriterController {
         document.add(paragraph1);
         document.add(imageToInsert);
         document.add(header2);
+        document.add((Element) table);
         document.close();
 
         return "Document created";
