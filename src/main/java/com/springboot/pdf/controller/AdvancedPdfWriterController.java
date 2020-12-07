@@ -47,7 +47,9 @@ public class AdvancedPdfWriterController {
         String imageFile = "C:\\Users\\user\\Documents\\ntwari egide documents\\spring boot\\Spring-boot-PDF-reader-writer\\src\\main\\resources\\apple.jpg";
 
         Image imageToInsert  = Image.getInstance(imageFile);
-
+        imageToInsert.setAlt("apple logo image");
+        imageToInsert.setIndentationRight(30);
+        imageToInsert.setIndentationLeft(30);
 
         document.add(header);
         document.add(paragraph1);
