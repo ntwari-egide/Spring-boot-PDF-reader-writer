@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.FileOutputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @RestController
 public class PdfManagerController {
@@ -37,6 +39,9 @@ public class PdfManagerController {
         PdfWriter.getInstance(document,new FileOutputStream("ImagePdf.pdf"));
 
         document.open();
+        Paths path = Paths.get(ClassLoader.getSystemResource("").toURI());
+
+        Image imageToInsert =  Image.getInstance()
 
         document.close();
 
