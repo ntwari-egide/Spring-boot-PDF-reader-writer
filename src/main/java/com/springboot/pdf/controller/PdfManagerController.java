@@ -15,7 +15,15 @@ public class PdfManagerController {
         Document document = new Document();
 
         // creating the instance of the PdfWriter class
-        PdfWriter.getInstance(document,new FileOutputStream("MycreatedPdf.pdf"));
+        PdfWriter.getInstance(document,new FileOutputStream("MyCreatedPdf.pdf"));
+
+        // open document
+
+        //Styling the document
+
+        // Adding the content
+
+        //Closing the document
 //        return "File pf is being created ";
     }
 }
