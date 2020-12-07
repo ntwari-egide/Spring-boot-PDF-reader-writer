@@ -1,5 +1,7 @@
 package com.springboot.pdf.controller;
 
+import com.itextpdf.layout.element.Cell;
+import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.property.BackgroundImage;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPage;
@@ -8,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class AdvancedPdfWriterController {
@@ -50,8 +54,50 @@ public class AdvancedPdfWriterController {
         imageToInsert.setAlt("apple logo image");
         imageToInsert.scaleToFit(400,400);
 
-        //                                                      ADDING THE HEADER PARAGRAPH
+        //                                       ADDING THE HEADER PARAGRAPH
         Chunk header2 = new Chunk("Table of all required calculation",new Font(FontFactory.getFont(FontFactory.HELVETICA,16,new BaseColor(252, 140, 3))));
+
+        //                                       ADDING THE TABLE
+        Table table = new Table(4);
+        table.addCell("industry");
+        table.addCell("segment");
+        table.addCell("sales");
+        table.addCell("average industry");
+
+        // inserting data into the table
+
+        List<String> industries  = new ArrayList();
+        industries.add("Magerwa");
+        industries.add("Nyirangarama interprise");
+        industries.add("Ikawa Industry");
+        industries.add("Ibigori Industry");
+        industries.add("Inyange Industry");
+        industries.add("Mukamira daily industry");
+        industries.add("Icyayi industry rw");
+
+
+        List<String> segments  = new ArrayList();
+        segments.add("Industry");
+        segments.add("Enterprise");
+        segments.add("Industry");
+        segments.add("Enterprise");
+        segments.add("Industry");
+        segments.add("Enterprise");
+        segments.add("Industry");
+
+
+        List<Integer> sales  = new ArrayList();
+        industries.add(123000);
+        industries.add("Enterprise");
+        industries.add("Industry");
+        industries.add("Enterprise");
+        industries.add("Industry");
+        industries.add("Enterprise");
+        industries.add("Industry");
+
+
+        for (int i = 0 ; )
+
 
         document.add(header);
         document.add(paragraph1);
