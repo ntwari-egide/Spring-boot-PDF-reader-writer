@@ -39,9 +39,11 @@ public class PdfManagerController {
         PdfWriter.getInstance(document,new FileOutputStream("ImagePdf.pdf"));
 
         document.open();
-        Paths path = Paths.get(ClassLoader.getSystemResource("").toURI());
+        Path path = Paths.get(ClassLoader.getSystemResource("shapes.png").toURI());
 
-        Image imageToInsert =  Image.getInstance()
+        Image imageToInsert =  Image.getInstance(path.toAbsolutePath().toString());
+
+        document.add(imageToInsert);
 
         document.close();
 
