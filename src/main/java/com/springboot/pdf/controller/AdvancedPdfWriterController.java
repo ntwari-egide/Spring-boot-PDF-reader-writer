@@ -48,8 +48,7 @@ public class AdvancedPdfWriterController {
 
         Image imageToInsert  = Image.getInstance(imageFile);
         imageToInsert.setAlt("apple logo image");
-        imageToInsert.setIndentationRight(30);
-        imageToInsert.setIndentationLeft(30);
+        imageToInsert.scaleToFit(400,400);
 
         document.add(header);
         document.add(paragraph1);
