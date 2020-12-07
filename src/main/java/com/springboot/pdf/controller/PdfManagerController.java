@@ -57,7 +57,9 @@ public class PdfManagerController {
     }
 
     @GetMapping("/make-table-pdf/itext")
-    public String creatingPdfInsertingTables(){
+    public String creatingPdfInsertingTables()throws Exception{
+        Document document = new Document();
+        PdfWriter.getInstance(document,new FileOutputStream("tableInsertedPdf.pdf"));
         return "pdf created ";
     }
 }
