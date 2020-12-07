@@ -1,6 +1,7 @@
 package com.springboot.pdf.controller;
 
 import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -60,6 +61,12 @@ public class PdfManagerController {
     public String creatingPdfInsertingTables()throws Exception{
         Document document = new Document();
         PdfWriter.getInstance(document,new FileOutputStream("tableInsertedPdf.pdf"));
+        document.open();
+
+        PdfPTable table = new PdfPTable(3);
+
+
+        document.close();
         return "pdf created ";
     }
 }
