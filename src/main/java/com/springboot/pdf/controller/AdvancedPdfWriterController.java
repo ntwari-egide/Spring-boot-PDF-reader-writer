@@ -21,7 +21,10 @@ public class AdvancedPdfWriterController {
 
         document.open();
         Font font = FontFactory.getFont(FontFactory.HELVETICA,18, BaseColor.BLACK);
+        document.setMargins(23f,23f,23f,23f);
         Chunk header = new Chunk("Advanced PDF creator",font);
+
+        header.setBackground(BaseColor.YELLOW);
 
         document.add(header);
         document.close();
