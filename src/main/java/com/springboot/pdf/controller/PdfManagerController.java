@@ -75,7 +75,6 @@ public class PdfManagerController {
             table.addCell("student description " + i);
         }
 
-
         document.add(table);
         document.close();
         return "pdf created ";
