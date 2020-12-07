@@ -102,16 +102,19 @@ public class AdvancedPdfWriterController {
             int sum = sales.get(i) * 3;
             table.addCell(String.valueOf(sum));
         }
-
-
         // styling the table
         table.setHorizontalAlignment(0);
 
+        //                                  ADDING THE LISTS
+        Paragraph paragraph2 = new Paragraph("Successful law firms require effective finance, accounting and billing, but these critical functions involve a great deal of labor-intensive routine");
+
+        //
         document.add(header);
         document.add(paragraph1);
         document.add(imageToInsert);
         document.add(header2);
         document.add(table);
+        document.add(paragraph2);
         document.close();
 
         return "Document created";
