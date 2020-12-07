@@ -58,6 +58,25 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/kernel -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>kernel</artifactId>
+			<version>7.1.13</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.spire-math/spire -->
+		<dependency>
+			<groupId>org.spire-math</groupId>
+			<artifactId>spire_2.11</artifactId>
+			<version>0.13.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.typelevel/spire -->
+		<dependency>
+			<groupId>org.typelevel</groupId>
+			<artifactId>spire_2.13</artifactId>
+			<version>0.17.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

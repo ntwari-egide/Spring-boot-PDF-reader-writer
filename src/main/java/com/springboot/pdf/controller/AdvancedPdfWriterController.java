@@ -1,6 +1,8 @@
 package com.springboot.pdf.controller;
 
+import com.itextpdf.layout.property.BackgroundImage;
 import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfPage;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,7 +28,18 @@ public class AdvancedPdfWriterController {
         document.add(Chunk.NEWLINE);
         header.setBackground(BaseColor.YELLOW);
 
-       document.add(header);
+        // adding background image
+        String contentParagraph = "A law firm is usually a partnership between lawyers who have come together to offer their expertise to clients under one name " +
+                "These partners share the profits of the firm as well as the risks (liabilities), and engage other lawyers to work with them as associates."+
+                "According to The Lawyer UK 200 2019, the below organisations make up the top 50 UK law firms based on annual turnover";
+
+        Paragraph paragraph1 = new Paragraph(contentParagraph);
+        paragraph1.setAlignment(4);
+        paragraph1.setPaddingTop(40);
+        paragraph1.setIndentationLeft(30);
+
+        document.add(header);A
+        document.add(paragraph1);
         document.close();
 
         return "Document created";

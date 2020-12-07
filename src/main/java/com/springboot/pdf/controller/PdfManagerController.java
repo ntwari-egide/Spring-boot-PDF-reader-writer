@@ -49,8 +49,10 @@ public class PdfManagerController {
 
         Image imageToInsert = Image.getInstance(imageFile);
 
+
         imageToInsert.setAlt("inserted image by spring boot");
         imageToInsert.setWidthPercentage(40);
+
         document.add(header);
         document.add(imageToInsert);
 
