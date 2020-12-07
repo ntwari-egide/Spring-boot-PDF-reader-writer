@@ -1,5 +1,6 @@
 package com.springboot.pdf.controller;
 
+import com.itextpdf.layout.element.Table;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -63,10 +64,9 @@ public class PdfManagerController {
         PdfWriter.getInstance(document,new FileOutputStream("tableInsertedPdf.pdf"));
         document.open();
 
-        //creating the table to insert
-        
-
-        PdfPTable table = new PdfPTable(3);
+        // Creating a table object
+        float [] pointColumnWidths = {150F, 150F, 150F};
+        Table table = new Table(pointColumnWidths);
 
 
         document.add(table);
