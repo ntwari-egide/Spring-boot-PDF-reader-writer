@@ -34,9 +34,9 @@ public class AdvancedPdfWriterController {
         header.setBackground(BaseColor.YELLOW);
 
         // adding background image
-        String contentParagraph = "A law firm is usually a partnership between lawyers who have come together to offer their expertise to clients under one name " +
+        String contentParagraph = "\n\nA law firm is usually a partnership between lawyers who have come together to offer their expertise to clients under one name " +
                 "These partners share the profits of the firm as well as the risks (liabilities), and engage other lawyers to work with them as associates."+
-                "According to The Lawyer UK 200 2019, the below organisations make up the top 50 UK law firms based on annual turnover";
+                "According to The Lawyer UK 200 2019, the below organisations make up the top 50 UK law firms based on annual turnover\n\n\n";
 
         Paragraph paragraph1 = new Paragraph(contentParagraph);
         paragraph1.setAlignment(4);
@@ -56,7 +56,7 @@ public class AdvancedPdfWriterController {
         imageToInsert.scaleToFit(400,400);
 
         //                                       ADDING THE HEADER PARAGRAPH
-        Chunk header2 = new Chunk("Table of all required calculation",new Font(FontFactory.getFont(FontFactory.HELVETICA,16,new BaseColor(252, 140, 3))));
+        Chunk header2 = new Chunk("\n\nTable of all required calculation\n\n",new Font(FontFactory.getFont(FontFactory.HELVETICA,16,new BaseColor(252, 140, 3))));
 
         //                                       ADDING THE TABLE
         PdfPTable table = new PdfPTable(4);
@@ -107,7 +107,7 @@ public class AdvancedPdfWriterController {
 
         //                                  ADDING THE LISTS
         Paragraph paragraph2 = new Paragraph("Successful law firms require effective finance, accounting and billing, but these critical functions involve a great deal of labor-intensive routine" +
-                "\nOur services we provide : ");
+                "\n\n\nOur services we provide : ");
 
         com.itextpdf.text.List listsOfServices = new com.itextpdf.text.List();
         listsOfServices.add("Arbitration");
