@@ -106,9 +106,10 @@ public class AdvancedPdfWriterController {
         table.setHorizontalAlignment(0);
 
         //                                  ADDING THE LISTS
-        Paragraph paragraph2 = new Paragraph("Successful law firms require effective finance, accounting and billing, but these critical functions involve a great deal of labor-intensive routine");
+        Paragraph paragraph2 = new Paragraph("Successful law firms require effective finance, accounting and billing, but these critical functions involve a great deal of labor-intensive routine" +
+                "\nOur services we provide : ");
 
-        com.itextpdf.text.List listsOfServices = new com.itextpdf.text.List(com.itextpdf.text.List.ALIGN_CENTER);
+        com.itextpdf.text.List listsOfServices = new com.itextpdf.text.List();
         listsOfServices.add("Arbitration");
         listsOfServices.add("Mediation");
         listsOfServices.add("Documenting");
