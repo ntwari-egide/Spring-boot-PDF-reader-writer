@@ -46,6 +46,12 @@
 			<version>5.5.13.2</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/layout -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>layout</artifactId>
+			<version>7.1.13</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

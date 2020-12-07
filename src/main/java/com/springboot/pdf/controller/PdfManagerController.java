@@ -64,7 +64,7 @@ public class PdfManagerController {
         document.open();
 
         //creating the table to insert
-
+        
 
         PdfPTable table = new PdfPTable(3);
 
