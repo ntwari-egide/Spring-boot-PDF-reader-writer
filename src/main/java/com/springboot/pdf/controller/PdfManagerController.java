@@ -63,6 +63,9 @@ public class PdfManagerController {
         PdfWriter.getInstance(document,new FileOutputStream("tableInsertedPdf.pdf"));
         document.open();
 
+        //creating the table to insert
+
+
         PdfPTable table = new PdfPTable(3);
 
 
