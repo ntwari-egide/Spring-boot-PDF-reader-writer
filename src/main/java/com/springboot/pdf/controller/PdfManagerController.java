@@ -55,4 +55,9 @@ public class PdfManagerController {
 
         return "spring pdf generated ";
     }
+
+    @GetMapping("/make-table-pdf/itext")
+    public String creatingPdfInsertingTables(){
+        return "pdf created ";
+    }
 }
